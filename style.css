@@ -1,0 +1,129 @@
+*, ::before, ::after{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.container-grille{
+    height: 100vh;
+    width: 100%;
+    display: grid ;
+    grid-template-columns: 200px 2fr;
+    grid-template-rows: auto 2fr;
+
+}
+
+header{
+    grid-column: span 3;
+    padding: 30px;
+    text-align: center;
+    font-size: 22px;
+    background-color: blueviolet;
+    color: white;
+}
+
+main{
+    padding: 20px;
+    text-align: center;
+}
+
+nav{
+    background-color: rgb(223, 106, 28);
+}
+
+.liste-sidenav{
+list-style-type: none;    
+max-height: 650px;
+display: flex;
+flex-direction: column;
+color:black
+}
+
+.liste-sidenav li{
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.liste-sidenav li a{
+    font-size: 18px;
+    color: #f1f1f1;
+}
+h1{
+    margin-bottom: 15px;
+}
+
+
+
+footer{
+    height: 50px;
+    padding: 20px;
+    justify-content: center;
+    align-items: center;
+    background-color: pink;
+    grid-column: span 3;
+    text-align: center;
+    color:grey
+}
+
+@media screen and (max-width: 1000px) {
+    .container-grille{
+        display:flex;
+        flex-direction: column;
+    }
+    .liste-sidenav{
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .liste-sidenav li{
+        margin:0 10px;
+    }
+    main p{
+        min-height: 610px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .liste-sidenav li a{
+        margin: 0 5px;
+        font-size: 12px;
+        color: aqua;
+    }
+    
+}
+
+.medium{
+    height:100px;
+    border: 1px solid;
+    background-color: aqua;
+    width: auto;
+    transition: 1s;
+}
+
+#big{
+    width: 700px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    transition: 1s;
+}
+
+@media screen and (max-width:1000px) {
+
+    #big{
+        width: 500px;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        background-color: red;
+        transition: 1s;
+    }
+    .medium{
+        background-color: blueviolet;
+        transition: 1s;
+    }
+}
